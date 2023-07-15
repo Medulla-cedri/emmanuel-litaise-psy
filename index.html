@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmanuel LITAISE</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="favicon.ico" />
+
+    <!--Javascript pour l'affichage des pages-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#onglet-accueil').addClass('active');
+            $('.page-title').hide();
+            $('#onglet-accueil .page-title').show();
+
+            $('.onglets a').on('click', function (event) {
+                event.preventDefault();
+
+                var targetPage = $(this).attr('href');
+
+                $('.page').removeClass('active');
+                $('.onglets a').removeClass('active');
+                $(targetPage).addClass('active');
+                $(this).addClass('active');
+
+                $('.page-title').hide();
+                $(targetPage + ' .page-title').show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Définition du logo et des onglets -->
+
+    <nav>
+        <h1 class="logo">EMMANUEL LITAISE</h1>
+        <div class="onglets">
+            <a href="#page-accueil" id="onglet-accueil">Accueil</a>
+            <a href="#page-presentation">Présentation</a>
+            <a href="#page-cabinet-dieppe">Cabinet de Dieppe</a>
+            <a href="#page-cabinet-grum">Cabinet de Grumesnil</a>
+            <a href="#page-pratique">Pratique et support théorique</a>
+        </div>
+    </nav>
+
+    <!-- Création des différentes pages -->
+
+    <section class="pages">
+        <div id="page-accueil" class="page active">
+            <h4>Exemple 1 :</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto praesentium voluptatum rerum asperiores cum quam deleniti veritatis incidunt expedita.
+                    Cupiditate excepturi dolores, sapiente debitis, ducimus sunt ut, laudantium porro fugit eos aperiam sequi iusto animi nostrum officiis distinctio tempore?
+                    Culpa maxime vitae perferendis dicta et quam consectetur fuga aspernatur nulla quas laudantium provident distinctio quaerat sunt soluta, tenetur repellat!</li>
+                    
+                </ul>
+                <h4>Exemple 2 :</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quam sequi expedita perferendis magni ipsum doloribus cum, accusamus beatae facilis tempore labore laborum molestiae adipisci ipsam, officia reiciendis, fugit explicabo voluptate inventore. Nihil voluptate ullam beatae qui maiores. Sapiente cumque sint ipsum ex voluptatibus error nostrum ad nobis, est animi.</li>
+                    
+                </ul>
+                <h4>Exemple 3 :</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod quaerat fugiat possimus obcaecati non dolorem voluptatum velit deserunt. Similique unde, repellat amet soluta corporis eos, assumenda accusamus atque vel enim nesciunt sapiente incidunt laboriosam expedita molestiae obcaecati? Quae iste porro incidunt aspernatur optio omnis necessitatibus dolorum soluta! Alias voluptatem aliquam error eius, officia voluptate enim repellat ab nostrum rerum dolorum delectus deleniti amet porro, molestias, ipsum expedita corrupti ipsam illum.</li>
+                    
+                </ul>
+        </div>
+
+        <div id="page-presentation" class="page">
+
+            <div class="flex-presentation"><img src="/images/sketch-gecc2d1ff1_1920.jpg" alt="Photo-présentation" class="image-third">
+                
+                <p class="presentation-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dicta doloremque quae eius voluptatem nesciunt. Enim sint eum nihil. Porro.
+                    Voluptas asperiores quaerat ex! Quam illo assumenda, commodi neque quia voluptas doloremque sunt, vel eaque officiis sapiente eum accusantium magnam?
+                    Necessitatibus vero, quibusdam autem velit natus totam aspernatur, ipsa nisi facere iure odio labore, laboriosam rerum aut libero impedit consectetur.
+                    Optio quo similique numquam amet odit iure consequuntur, ullam accusamus necessitatibus id voluptate molestiae minima saepe unde assumenda a delectus.
+                    Illo dolores, vitae exercitationem rerum veniam nesciunt commodi dolorem officiis repudiandae aut officia? Adipisci officia, ab itaque repellat soluta dolorem?</p>
+                    </div>
+            
+            
+        </div>
+
+        <div id="page-cabinet-dieppe" class="page">
+            <h1 class="title-cabinet">Cabinet de Dieppe</h1>
+            <span>10 rue Desceliers, 76200 (fond de cour à gauche)</span>
+
+            <p>
+                <h4>Horaires :</h4>
+                <ul>
+                    <li>Du Lundi au Vendredi (1 semaine sur 2) de 9h à 19h</li>
+                    <li>Le Samedi de 9h à 12h (1 semaine sur 2)</li>
+                </ul>
+            </p>
+
+            <p>
+                <h4>Tarif :</h4>
+                <ul>
+                    <li>50€ la séance</li>
+                </ul>
+            </p>
+
+            <p>
+                <h4>Durée de la scéance :</h4>
+                <ul>
+                    <li>De 1h à 1h30</li>
+                </ul>
+            </p>
+
+            <p>
+                <h4>Contact :</h4>
+                <ul>
+                    <li>06.95.02.42.78</li>
+                </ul>
+            </p>
+
+            <img src="/images/dieppe_2.png" alt="Cabinet de Dieppe" class="image-first">
+            <img src="/images/dieppe_1.png" alt="Cabinet de Dieppe" class="image-first">
+        </div>
+
+        <div id="page-cabinet-grum" class="page">
+            <h1 class="title-cabinet">Cabinet de Grumesnil</h1>
+            <span>26 rue Tracia (2km après la sortie de Grumesnil en direction de Gaillefontaine sur la RD135).</span>
+
+            <p>
+                <h4>Horaires :</h4>
+                <ul>
+                    <li>Du Lundi au Vendredi (1 semaine sur 2) de 9h à 19h</li>
+                    <li>Le Samedi de 9h à 12h (1 semaine sur 2)</li>
+                </ul>
+            </p>
+
+            <p>
+                <h4>Tarif :</h4>
+                <ul>
+                    <li>40€ la séance</li>
+                </ul>
+            </p>
+
+            <p>
+                <h4>Durée de la scéance :</h4>
+                <ul>
+                    <li>De 1h à 1h30</li>
+                </ul>
+            </p>
+
+            <p>
+                <h4>Contact :</h4>
+                <ul>
+                    <li>06.95.02.42.78</li>
+                </ul>
+            </p>
+
+            <img src="/images/Grumesnil 1.png" alt="Cabinet de Grumesnil" class="image-second">
+            <img src="/images/Grumesnil 2.png" alt="Cabinet de Grumesnil" class="image-second">
+            
+        </div>
+
+        <div id="page-pratique" class="page">
+
+            <h1 class="title-pratique">Pratiques</h1>
+
+            <p>
+                <h4>Exemple 1 :</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto praesentium voluptatum rerum asperiores cum quam deleniti veritatis incidunt expedita.
+                    Cupiditate excepturi dolores, sapiente debitis, ducimus sunt ut, laudantium porro fugit eos aperiam sequi iusto animi nostrum officiis distinctio tempore?
+                    Culpa maxime vitae perferendis dicta et quam consectetur fuga aspernatur nulla quas laudantium provident distinctio quaerat sunt soluta, tenetur repellat!</li>
+                    
+                </ul>
+            </p>
+
+            <p>
+                <h4>Exemple 2 :</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo deserunt sapiente quas adipisci modi enim iusto autem natus quis nihil!</li>
+                </ul>
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, non. Placeat rem architecto harum recusandae distinctio, dolor sunt. Aperiam, incidunt.</li>
+                </ul>
+            
+            </p>
+
+            <h4>Exemple 3 :</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure quibusdam, enim dolore alias nostrum libero ad dignissimos in aspernatur corporis aut facere corrupti iusto reprehenderit explicabo atque culpa, omnis error soluta tenetur ab. Excepturi itaque eum saepe reprehenderit dolorem voluptates obcaecati, nesciunt ab cumque. Fugit dolore sunt provident ad doloribus.</li>
+                    
+                </ul>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        © 2021 Emmanuel Litaise
+    </footer>
+
+</body>
+
+</html>
